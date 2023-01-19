@@ -14,12 +14,15 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
+      basename: '/interacto-ui',
       element: <App />,
+      children: [
+        {
+          path: "/meet",
+          element: <Meet />
+        }
+      ],
       errorElement: <NotFoundErrorPage />
-    },
-    {
-      path: "/meet",
-      element: <Meet />
     },
   ], 
   {
