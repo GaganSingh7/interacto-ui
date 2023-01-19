@@ -4,30 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import NotFoundErrorPage from './NotFoundErrorPage/NotFoundErrorPage';
 import Meet from './Meet/Meet';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
-      basename: '/interacto-ui',
       element: <App />,
-      children: [
-        {
-          path: "meet",
-          element: <Meet />
-        }
-      ],
       errorElement: <NotFoundErrorPage />
     },
-  ], 
-  {
-    basename: "/interacto-ui"
-  }
+    {
+      path: "/meet",
+      element: <Meet />
+    }
+  ]
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
