@@ -10,17 +10,22 @@ import {
 import NotFoundErrorPage from './NotFoundErrorPage/NotFoundErrorPage';
 import Meet from './Meet/Meet';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <NotFoundErrorPage />
+    },
+    {
+      path: "/meet",
+      element: <Meet />
+    },
+  ], 
   {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFoundErrorPage />
-  },
-  {
-    path: "/meet",
-    element: <Meet />
-  },
-]);
+    basename: "/interacto-ui"
+  }
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
