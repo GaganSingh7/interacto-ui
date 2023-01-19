@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/interacto-ui/static/css/main.b40d7a94.css",
+    "main.js": "/interacto-ui/static/js/main.3c6fb522.js",
+    "static/js/787.c27bf162.chunk.js": "/interacto-ui/static/js/787.c27bf162.chunk.js",
+    "index.html": "/interacto-ui/index.html",
+    "main.b40d7a94.css.map": "/interacto-ui/static/css/main.b40d7a94.css.map",
+    "main.3c6fb522.js.map": "/interacto-ui/static/js/main.3c6fb522.js.map",
+    "787.c27bf162.chunk.js.map": "/interacto-ui/static/js/787.c27bf162.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b40d7a94.css",
+    "static/js/main.3c6fb522.js"
+  ]
+}
