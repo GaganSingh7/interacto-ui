@@ -18,7 +18,7 @@ const router = createBrowserRouter(
       element: <App />,
       children: [
         {
-          path: "/meet",
+          path: "meet",
           element: <Meet />
         }
       ],
