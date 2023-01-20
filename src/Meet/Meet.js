@@ -1,6 +1,8 @@
+import Footer from './Footer';
+
 const Meet = () => {
   return (
-    <p>Hey</p>
+    <Footer />
   );
 };
 

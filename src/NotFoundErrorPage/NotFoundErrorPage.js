@@ -1,5 +1,5 @@
 import styles from './NotFoundErrorPage.module.css';
-import GhostIcon from './GhostIcon';
+import GhostIcon from '../Assets/GhostIcon';
 
 const NotFoundErrorPage = () => {
   return (
