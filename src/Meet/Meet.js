@@ -5,10 +5,12 @@ import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import { useParams } from 'react-router-dom';
 
-const socket = io('https://interacto-api.onrender.com');
+const INTERACTO_API = 'https://interacto-api.onrender.com';
+const INTERACTO_PEER_HOST = 'peerjs-xsyj.onrender.com';
+const socket = io(INTERACTO_API);
 const peer = new Peer(undefined, {
   path: '/interacto',
-  host: 'peerjs-xsyj.onrender.com'
+  host: INTERACTO_PEER_HOST
 });
 
 const Meet = () => {
@@ -22,9 +24,10 @@ const Meet = () => {
 
   useEffect(() => {
     if (!roomId) {
-      fetch('http://localhost:3030/new-room')
+      fetch(`${INTERACTO_API}/new-room`)
       .then(response => response.json())
       .then(({ roomId }) => {
+        console.log('roomId', roomId);
         setMyRoomId(roomId);
       });
     }
